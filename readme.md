@@ -1,3 +1,3 @@
 //run command
 
-npm rum compile:sass
+npm run compile:sass

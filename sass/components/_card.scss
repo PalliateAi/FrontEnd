@@ -16,7 +16,7 @@
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .9);
 
         &--front {
             background-color: $color-white;
@@ -58,18 +58,18 @@
         border-top-right-radius: 3px;
         
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
-            url(../img/nat-5.jpg);
+            background-image: // linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
+            url(../img/day-centre.jpg);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
-            url(../img/nat-6.jpg);
+            background-image: // linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
+            url(../img/residential.jpg);
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
-            url(../img/nat-7.jpg);
+            background-image: // linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
+            url(../img/nurse.jpg);
         }
     }
 
@@ -154,5 +154,54 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
+    }
+
+
+    @include respond (tab-port){
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            overflow: hidden;
+    
+            &--back {
+                transform: rotateY(0);
+            }
+        }
+      
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+    
+        &:hover &__side--back {
+            transform: rotateY(0);
+        }
+    
+    
+       
+        // FRONT SIDE STYLING
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 4rem;
+        }
+    
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+    
+        &__price-value {
+            font-size: 6rem;
+        }  
     }
 }
